@@ -7,7 +7,7 @@ export default function NoteState(props){
     const [notes,setnotes] = useState([])
 
     const fetchNOtes = async()=>{
-        const response = await fetch(`${host}/api/get_tickets`,{
+        const response = await fetch(`${host}/api/getNotes`,{
             method : "GET",
             headers : {
                 "Content-Type" : "application/json",
@@ -21,7 +21,7 @@ export default function NoteState(props){
 
     const addNotes = async (title,description,priority)=>{
         const number = 0
-        const response = await fetch(`${host}/api/raise_ticket`,{
+        const response = await fetch(`${host}/api/createNotes`,{
             method : "POST",
             headers : {
                 "Content-Type" : "application/json",
@@ -36,7 +36,7 @@ export default function NoteState(props){
     }
 
     const deleteNote = async(id)=>{
-        const response = await fetch(`${host}/api/deleteTicket`,{
+        const response = await fetch(`${host}/api/deleteNotes`,{
             method : "DELETE",
             headers : {
                 "Content-Type" : "application/json",
@@ -50,7 +50,7 @@ export default function NoteState(props){
     }
 
     const updateNote = async (id,title,description,priority)=>{
-        const response = await fetch(`${host}/api/updateTicket`,{
+        const response = await fetch(`${host}/api/updateNotes`,{
             method : "PUT",
             headers : {
                 "Content-Type" : "application/json",
@@ -92,12 +92,3 @@ export default function NoteState(props){
 
 
 
-
-// {
-//     _id: ObjectId('65deee5fa6567253b3ae4222'),
-//     mailid: 'ak@gmail.com',
-//     ticket_title: 'fgd',
-//     priority: 'refds',
-//     ticket_description: 'fgd',
-//     ph_number: 0
-//   }
