@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-export default function Login() {
+export default function Login(props) {
     const [cred,setCred] = useState({email : "",password : ""})
     let navigate = useNavigate()
     const onChange = (event) => {
@@ -22,6 +22,7 @@ export default function Login() {
         if(response.status === 200){
             localStorage.setItem('access_token',resp.access_token)
             navigate('/')
+            props.alert("LoggedIn Successfully","success")
         }
         
     }
