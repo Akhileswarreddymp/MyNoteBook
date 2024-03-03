@@ -1,5 +1,7 @@
 export default function SignUp(){
     return(
+        <div style={{marginTop: "125px"}}>
+            <h2>SignUp to use iNoteBook</h2>
         <form>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">User Name</label>
@@ -16,5 +18,6 @@ export default function SignUp(){
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        </div>
     )
 }

@@ -12,7 +12,7 @@ export default function AddNote(){
         addNotes(note.title,note.description,note.tag)
     }
     return(
-        <div className="container my-3">
+        <div className="container" style={{marginTop: "125px"}}>
             <h2>Add Your Notes</h2>
             <form className="my-3">
                 <div className="mb-3">

@@ -24,14 +24,17 @@ function App() {
     <>
       <NoteState>
         <Router>
+          <div className="fixed-top">
           <NavBar />
           <Alert alert = {alert} />
+          </div>
+          
           <div className="container">
             <Routes>
-              <Route exact path="/" element={<Home />}></Route>
+              <Route exact path="/" element={<Home alert={showAlert} />}></Route>
               <Route exact path="/about" element={<About />}></Route>
               <Route exact path="/login" element={<Login alert={showAlert} />}></Route>
-              <Route exact path="/signUp" element={<SignUp alert={showAlert} />}></Route>
+              <Route exact path="/signUp" element={<SignUp />}></Route>
             </Routes>
           </div>
         </Router>

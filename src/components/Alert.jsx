@@ -7,3 +7,8 @@ export default function Alert(props){
       </div>
     )
 }
+
+
+
+
+// {props.alert.value === "danger" ? "error" :props.alert.value}

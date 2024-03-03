@@ -2,11 +2,11 @@
 import Notes from "../context/Notes.jsx";
 
 
-export default function Home(){
+export default function Home(props){
     
     return(
         <>
-                <Notes />
+                <Notes alert={props.alert} />
         </>
         
     )

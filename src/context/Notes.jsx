@@ -4,7 +4,7 @@ import NotesItem from "./notesItem"
 import AddNote from "./AddNote"
 import { useNavigate } from "react-router-dom"
 
-export default function Notes() {
+export default function Notes(props) {
     const navigate = useNavigate()
     const context = useContext(noteContext)
     const { notes, fetchNOtes, updateNote } = context
@@ -15,6 +15,7 @@ export default function Notes() {
     const refClose = useRef(null)
     const handleClick = (event) => {
         updateNote(note.id,note.utitle,note.udescription,note.utag)
+        props.alert("Notes Updated Successfully","success")
         refClose.current.click()
         
     }
@@ -75,7 +76,7 @@ export default function Notes() {
                 <h2>Your Notes</h2>
                 {notes.map((notes) => {
                     return (
-                        <NotesItem key={notes._id ?notes._id : notes.ticket_description } updateNotes={updateNotes} notes={notes} />
+                        <NotesItem key={notes._id ?notes._id : notes.ticket_description } alert = {props.alert} updateNotes={updateNotes} notes={notes} />
                     )
                 })}
             </div>
