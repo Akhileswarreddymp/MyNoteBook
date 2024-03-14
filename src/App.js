@@ -34,7 +34,7 @@ function App() {
               <Route exact path="/" element={<Home alert={showAlert} />}></Route>
               <Route exact path="/about" element={<About />}></Route>
               <Route exact path="/login" element={<Login alert={showAlert} />}></Route>
-              <Route exact path="/signUp" element={<SignUp />}></Route>
+              <Route exact path="/signUp" element={<SignUp alert={showAlert} />}></Route>
             </Routes>
           </div>
         </Router>
