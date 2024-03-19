@@ -4,6 +4,7 @@ import NotesItem from "./notesItem"
 import AddNote from "./AddNote"
 import { useNavigate } from "react-router-dom"
 
+
 export default function Notes(props) {
     const navigate = useNavigate()
     const context = useContext(noteContext)
